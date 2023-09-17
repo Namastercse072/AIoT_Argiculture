@@ -5,3 +5,5 @@ import random
 
 if __name__ == "__main__":
     getPort()
+    readTemperature()
+    readMoisture()
