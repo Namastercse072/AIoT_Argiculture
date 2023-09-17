@@ -9,9 +9,10 @@ def getPort():
     for i in range(0, N):
         port = ports[i]
         strPort = str(port)
-        if "USB Serial" in strPort:
+        if "/dev/ttyAMA2" in strPort:
             splitPort = strPort.split(" ")
             commPort = (splitPort[0])
+            print("Port Name:", strPort)
     return commPort
 '''Open Com port'''
 portName = getPort()
