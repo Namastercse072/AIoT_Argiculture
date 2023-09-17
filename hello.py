@@ -18,6 +18,7 @@ portName = getPort()
 print(portName)
 if portName != "None":
     ser = serial.Serial(port=portName, baudrate=9600)
+
 '''Send Command to Actuators'''
 relay1_ON  = [0, 6, 0, 0, 0, 255, 200, 91]
 relay1_OFF = [0, 6, 0, 0, 0, 0, 136, 27]
@@ -26,6 +27,7 @@ def setDevice1(state):
         ser.write(relay1_ON)
     else:
         ser.write(relay1_OFF)
+        
 '''Send command to Actuators'''
 relay2_ON  = [15, 6, 0, 0, 0, 255, 200, 164]
 relay2_OFF = [15, 6, 0, 0, 0, 0, 136, 228]
@@ -48,6 +50,7 @@ def serial_read_data(ser):
         else:
             return -1
         return 0
+    
 '''Read soil temperature '''
 soil_temperature =[1, 3, 0, 6, 0, 1, 100, 11]
 def readTemperature():
@@ -55,6 +58,7 @@ def readTemperature():
     ser.write(soil_temperature)
     time.sleep(1)
     return serial_read_data(ser)
+
 '''Read soil moisture'''
 soil_moisture = [1, 3, 0, 7, 0, 1, 53, 203]
 def readMoisture(): 
