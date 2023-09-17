@@ -19,6 +19,7 @@ portName = getPort()
 print(portName)
 if portName != "None":
     ser = serial.Serial(port=portName, baudrate=9600)
+    print(ser)
 
 '''Send Command to Actuators'''
 relay1_ON  = [0, 6, 0, 0, 0, 255, 200, 91]
