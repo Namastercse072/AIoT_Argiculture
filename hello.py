@@ -51,7 +51,7 @@ def serial_read_data(ser):
             return value 
         else:
             return -1
-        return 0
+    return 0
     
 '''Read soil temperature '''
 soil_temperature =[1, 3, 0, 6, 0, 1, 100, 11]
