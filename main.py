@@ -7,5 +7,6 @@ if __name__ == "__main__":
     getPort()
     setDevice1(True)
     setDevice2(True)
-    readTemperature()
-    readMoisture()
+    test_temp = readTemperature()
+    test_mois = readMoisture()
+    print('Temperature and Moisture value is:', test_temp, '\n', test_mois)
